@@ -1,24 +1,15 @@
 #!/usr/bin/python3
-# This function prints the last digit of a number
-# @number: The number to be inputed by the user
-
 
 def print_last_digit(number):
-    if number > 0:
-        print(f"{number % 10}", end="")
-        return (number % 10)
-    elif number < 0:
-        print(f"{(-number % 10)}", end="")
-        return ((-number % 10))
-    else:
-        print(f"{number:}", end="")
-        return (number)i
+    # Ensure the number is positive and get the last digit
+    last_digit = abs(number) % 10
 
+    # Print the last digit without a newline character
+    print(last_digit, end="")
 
-'''
-This function can also be used
+    return last_digit
 
-def print_last_digit(number):
-    print(f"{abs(number) % 10}", end="")
-    return (abs(number) % 10)
-'''
+# Example usage:
+# number = 12345
+# last_digit = print_last_digit(number)
+# This will print 5 and also return 5
