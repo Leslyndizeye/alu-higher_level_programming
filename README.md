@@ -1,1 +1,2 @@
-# alu-higher_level_programming
+Project badge
+Python - if/else, loops, functions
