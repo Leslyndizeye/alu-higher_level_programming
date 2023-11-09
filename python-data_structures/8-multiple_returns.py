@@ -1,15 +1,7 @@
 #!/usr/bin/python3
-def max_integer(my_list=[]):
-    if not my_list:
-        return None
+def multiple_returns(sentence):
+    if sentence:
+        sentence_length = len(sentence)
     else:
-        if len(my_list) == 1:
-            return my_list[0]
-        else:
-            op1 = my_list[0]
-            op2 = max_integer(my_list[1:])
-
-            if op1 > op2:
-                return op1
-            else:
-                return op2
+        sentence_length = 0
+    return tuple((sentence_length, None if not sentence else sentence[:1]))
