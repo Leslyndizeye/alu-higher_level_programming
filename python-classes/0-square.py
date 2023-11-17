@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-'''
-empty class
-'''
+"""Empty class"""
+
 
 class Square:
+    """Represents an empty square."""
     pass
-
