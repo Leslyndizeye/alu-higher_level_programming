@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-import sys
-
-message = "and that piece of art is useful - Dora Korpar, 2015-10-19\n"
-sys.stderr.write(message)
-sys.exit(1)
+for letter in range(122, 96, -1):
+    if letter % 2 != 0:
+        letter -= 32
+    print("{}".format(chr(letter)), end="")
