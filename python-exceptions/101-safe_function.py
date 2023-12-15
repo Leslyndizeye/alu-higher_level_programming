@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-""" Program that adds a new attribute to an object if it’s possible """
+def safe_function(fct, *args):
+    import sys
+    try:
+        result = fct(*args)
+    except Exception as i:
+        sys.stderr.write("Exception: {}\n".format(i))
+        result = None
 
-
-def add_attribute(obj, name, value):
-    """ function that adds a new attribute to an object if it’s possible """
-
-    if not hasattr(obj, "__dict__"):
-        raise TypeError("can't add new attribute")
-    setattr(obj, name, value)
+    return (result)
